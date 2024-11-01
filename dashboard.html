@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NS Panel</title>
+
+	<link rel="stylesheet" href="/styles.css">
+
+
+</head>
+<body>
+
+<div class="page-wrapper">
+
+	<main class="carousel" data-carousel>
+		<ul data-slides>
+
+			<li class="slide" data-active>
+				<div class="first display">
+
+					<div class="item clock">
+						<span id="clock">Clock</span>
+						<span id="date">Date</span>
+					</div>
+
+					<div class="item weather">
+						<div class="weather-img-wrap" id="weatherImgWrap">
+							<img id="weatherImg" src="img/not-available.svg">
+						</div>
+						<div class="outside-temp" id="outsideTemp">
+							<div class="temp-img-wrap" id="temp_image">
+								<img src="img/thermometer.svg" >
+							</div>
+							<div id="temp_value_wrapper">
+								<span id="temp_value">50</span>
+							</div>
+							<div>
+								<span>°F</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="item buttons" id="buttonGroup">
+						<div class="button fan" id="buttonFan">
+							<img src="img/fan-svgrepo-com.svg" alt="fan">
+						</div>
+						<div class="button first light" id="firstButtonLight">
+							<img src="/img/bulb-svgrepo-com.svg" alt="bulb1">
+						</div>
+						<div class="button second light" id="secondButtonLight">
+							<img src="/img/bulb-svgrepo-com.svg" alt="bulb2">
+						</div>
+						<div class="button third light" id="thirdButtonLight">
+							<img src="/img/bulb-svgrepo-com.svg" alt="bulb3">
+						</div>
+					</div>
+
+				</div>
+			</li>
+
+			<li class="slide">
+				<div class="second display">
+
+					<div class="item indoor-climate">
+						<div class="heating-img">
+							<img id="flame" src="/img/flame.svg">
+						</div>
+						<h1 class="temp-name">Inside Temp</h1>
+							<span class="indoor-img-wrap">
+								<img src="img/thermometer.svg">
+							</span>
+							<span class="indoor-temp" id="indoorTempValue">70</span>
+							<span class="fahrenheit">F</span>
+							<h1 class="hum-name">Inside Humidity</h1>
+							<span class="indoor-humidity-img">
+								<img src="img/humidity.svg">
+							</span>
+							<span class="humidity-amount" id="indoorHumidityValue">20</span>
+							<span class="humidity-percent">%</span>
+					</div>
+
+					<div class="item counter">
+						<h1 class="name">Counter</h1>
+						<div class="wrap">
+							<span class="increase">
+								<img id="countUp" src="/img/up-arrow-svgrepo-com.svg">
+							</span>
+							<span id="countAmount" class="count">0</span>
+							<span class="decrease">
+								<img id="countDown" src="/img/down-arrow-ui-svgrepo-com.svg">
+							</span>
+						</div>
+					</div>
+
+				</div>
+			</li>
+
+			<li class="slide">
+				<div class="third display">
+
+					<div id="title" class="title-screen">
+						<div class="title">
+							<h1>Space Invaders</h1>
+							<h4 class="score" id="score">Score: 0</h4>
+						</div>
+						<button id="startButton" class="start-game">START</button>
+					</div>
+
+					<div id="gameButtons" class="game-buttons">
+						<img class="arrows left" id="leftArrow" src="/space_invaders/game_imgs/left-arrow-svgrepo-com.png" alt="">
+						<img class="arrows right" id="rightArrow" src="/space_invaders/game_imgs/right-arrow-svgrepo-com.png" alt="">
+						<button class="end" id="end">END</button>
+
+						<div id="gameWrap" class="game-container-wrapper">
+							<canvas class="game-container" id="gameCanvas"></canvas>
+						</div>
+					</div>
+
+
+					<div class="game-assets">
+						<img id="characters" src="/space_invaders/game_imgs/DigitalRealms_SpaceShipAsset.png" alt="">
+						<img id="dot" src="/space_invaders/game_imgs/dot-svgrepo-com.png" alt="">
+					</div>
+
+				</div>
+			</li>
+
+		</ul>
+	</main>
+	
+
+
+	<section id="navigationBar" class="navigation">
+		<div class="page-left-wrap">
+			<button class="arrow" data-nav-button="prev">
+				<span class="left">&#x2190;</span>
+			</button>
+		</div>
+		<div class="page-dots">
+			<ul data-dots>
+				<li data-selected>
+					<div class="dot"></div>
+				</li>
+				<li>
+					<div class="dot"></div>
+				</li>
+				<li>
+					<div class="dot"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="page-right-wrap">
+			<button class="arrow" data-nav-button="next">
+				<span class="right">&#x2192;</span>
+			</button>
+		</div>
+	</section>
+
+</div>
+
+
+
+
+<!-- scripts -->
+<script src="scripts/navigation.js"></script>
+<script src="scripts/secrets.js"></script>
+<script src="scripts/setup.js"></script>
+<script src="/scripts/event_listeners.js"></script>
+
+<script src="/scripts/update_clock.js"></script>
+<script src="/scripts/update_weather_info.js"></script>
+<script src="/scripts/update_heating_info.js"></script>
+
+<!-- update_buttons.js changes the color if its true -- change updateBackground in event_listeners.js to run this file -->
+<!-- <script src="/scripts/update_buttons.js"></script> -->
+ 
+<script src="/scripts/counter.js"></script>
+
+<script src="/scripts/event_handler.js"></script>
+<script src="scripts/ha-connection.js"></script>
+
+<script src="/space_invaders/GameObject.js" type="module"></script>
+
+</body>
+</html>
