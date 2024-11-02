@@ -2,6 +2,12 @@ Change the variables in the secrets.js file.
 Check the sensor names in setup.js
 The dashboard.html is the main file.
 
+## Screenshots
+
+| ![Screenshot](page_one.png?raw=false "Page One")
+| ![Screenshot](page_two.png?raw=false "Page Two")
+| ![Screenshot](page_three.png?raw=false "Page Three") |
+
 ## Attributions
 
 Based on this repository https://github.com/dvejsada/Dashboard_project
