@@ -1,6 +1,10 @@
-Change the variables in the secrets.js file.
+Change the variables in the secrets.js file
+
 Check the sensor names in setup.js
-The dashboard.html is the main file.
+
+The dashboard.html is the main file
+
+Based on this repository https://github.com/dvejsada/Dashboard_project
 
 ## Screenshots
 
@@ -9,8 +13,6 @@ The dashboard.html is the main file.
 | ![Screenshot](page_three.png?raw=false "Page Three") |
 
 ## Attributions
-
-Based on this repository https://github.com/dvejsada/Dashboard_project
 
 The dashboards are using beautifull weather icons created by Bas Milius - https://github.com/basmilius/weather-icons
 
